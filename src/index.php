@@ -8,22 +8,6 @@ $url = "http://$_ENV[HYPERION_IP]:$_ENV[HYPERION_PORT]/json-rpc";
 $value 	  = strtolower(str_replace(' ','',$_GET['value']));
 $function = strtolower(str_replace(' ','',$_GET['function']));
 
-echo $function;
-
-$arr = Array(
-    //commands - first column is what you have to say or put in the url.
-
-    "black" => "--clearall", //turns off all the solid light, also the set effects
-    "off" => "--clearall", //turns off all the solid light, also the set effects
-    "on" => "-p 150 -c peru", //nice warm static back light
-    "0" => "--clearall", //turns off all the solid light, also the set effects
-    "usb on" => "-E V4L", //turns on usb hdmi capture
-    "usb off" => "-D V4L", //turns off usb hdmi capture
-    "usb" => "-E V4L",  //turns on usb hdmi capture
-    "standby" => "-D V4L", //turns off usb hdmi capture
-    );
-
-
 $colors['black'] = '[0,0,0]';
 $colors['white'] = '[255,255,255]';
 $colors['green'] = '[0,255,0]';

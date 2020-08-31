@@ -1,0 +1,13 @@
+version: "3.5"
+services:
+    api:
+       build: .
+       image: ifttt-hyperion
+       environment:
+         - HYPERION_IP=192.168.100.18
+         - HYPERION_PORT=8090
+       ports:
+         - 8000:8000
+       #Development
+       volumes:
+           - ./src:/usr/src/myapp
